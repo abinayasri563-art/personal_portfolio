@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abinayasri - Resume | B.Tech Information Science &amp; Engineering</title>
+  <meta name="description" content="Official resume of Abinayasri - B.Tech Information Science &amp; Engineering student, Aspiring Data Scientist and Web Developer.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1F2933;
+      background-color: #F4F3EE;
+      line-height: 1.5;
+      padding-bottom: 40px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #063F3A;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .toolbar h1 {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #C9A227;
+      color: #063F3A;
+    }
+
+    .btn-primary:hover {
+      background: #dfb634;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .resume-container {
+      max-width: 860px;
+      margin: 32px auto;
+      background: #FFFFFF;
+      padding: 48px 56px;
+      box-shadow: 0 4px 24px rgba(6, 63, 58, 0.08);
+      border-radius: 4px;
+      border: 1px solid rgba(6, 63, 58, 0.12);
+    }
+
+    .header-section {
+      border-bottom: 2.5px solid #063F3A;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .header-info h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #063F3A;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .header-info .headline {
+      font-size: 16px;
+      font-weight: 700;
+      color: #C9A227;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-contacts {
+      text-align: right;
+      font-size: 13px;
+      color: #4B5563;
+      line-height: 1.6;
+    }
+
+    .header-contacts a {
+      color: #063F3A;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .header-contacts a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #063F3A;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      border-bottom: 1.5px solid #E5E7EB;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #E5E7EB;
+    }
+
+    .summary-text {
+      font-size: 13.5px;
+      color: #374151;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .item {
+      margin-bottom: 12px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .item-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #1F2933;
+    }
+
+    .item-subtitle {
+      font-size: 13px;
+      color: #4B5563;
+      font-weight: 500;
+    }
+
+    .item-badge {
+      font-size: 12px;
+      font-weight: 700;
+      color: #063F3A;
+      background: #F4F7F6;
+      border: 1px solid rgba(6, 63, 58, 0.2);
+      padding: 1px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .item-date {
+      font-size: 12px;
+      color: #6B7280;
+      font-family: monospace;
+      white-space: nowrap;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 8px 12px;
+      font-size: 13px;
+    }
+
+    .skill-cat {
+      font-weight: 700;
+      color: #063F3A;
+    }
+
+    .skill-list {
+      color: #374151;
+    }
+
+    ul.project-points {
+      margin-top: 4px;
+      padding-left: 18px;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    ul.project-points li {
+      margin-bottom: 3px;
+      line-height: 1.45;
+    }
+
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 6px 0;
+      border-bottom: 1px dashed #E5E7EB;
+      font-size: 13px;
+    }
+
+    .cert-item:last-child {
+      border-bottom: none;
+    }
+
+    .cert-name {
+      font-weight: 700;
+      color: #1F2933;
+    }
+
+    .cert-issuer {
+      color: #4B5563;
+    }
+
+    .cert-badge {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #063F3A;
+      background: #E8F0EE;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        padding-bottom: 0;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .resume-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 24px 32px;
+        box-shadow: none;
+        border: none;
+      }
+
+      .header-section {
+        margin-bottom: 16px;
+      }
+
+      .section {
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <header class="toolbar">
+    <h1>Abinayasri — Official Resume</h1>
+    <div class="toolbar-actions">
+      <a href="/" class="btn btn-secondary">← Back to Portfolio</a>
+      <button onclick="window.print()" class="btn btn-primary">🖨️ Print / Save as PDF</button>
+    </div>
+  </header>
+
+  <!-- Resume Sheet -->
+  <main class="resume-container">
+    <!-- Header -->
+    <section class="header-section">
+      <div class="header-info">
+        <h1>Abinayasri</h1>
+        <div class="headline">Aspiring Data Scientist &amp; Web Developer</div>
+        <p style="font-size: 13px; color: #4B5563; margin-top: 4px;">
+          B.Tech Information Science &amp; Engineering | Women's Engineering College, Puducherry
+        </p>
+      </div>
+      <div class="header-contacts">
+        <div>Email: <a href="mailto:abinayasri563@gmail.com">abinayasri563@gmail.com</a></div>
+        <div>LinkedIn: <a href="https://www.linkedin.com/in/abinaya-sri-5434873b9/" target="_blank" rel="noopener noreferrer">linkedin.com/in/abinaya-sri-5434873b9</a></div>
+        <div>GitHub: <a href="https://github.com/abinayasri563-art" target="_blank" rel="noopener noreferrer">github.com/abinayasri563-art</a></div>
+        <div>Location: Puducherry, India</div>
+      </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Information Science and Engineering student passionate about data science, machine learning, software development, and modern responsive web technologies. Hands-on experience developing practical applications spanning machine learning predictive pipelines (Forest Fire Early Warning, Fake News NLP), edge embedded systems (Industrial IoT Edge Monitoring in C), and full-stack interactive platforms. Dedicated to writing clean, maintainable code and solving real-world technological challenges.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">B.Tech – Information Science &amp; Engineering</span>
+            <div class="item-subtitle">Women's Engineering College, Lawspet, Puducherry</div>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <span class="item-badge">Currently pursuing – 4th Year</span>
+            <span class="item-badge" style="background: #FFF8E1; border-color: #C9A227; color: #8A6D05; font-weight: 700;">CGPA: 7.94</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Higher Secondary Education (12th)</span>
+            <div class="item-subtitle">Strong academic foundation in Mathematics, Physics &amp; Computer Science</div>
+          </div>
+          <span class="item-badge" style="background: #FFF8E1; border-color: #C9A227; color: #8A6D05;">79.8%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">Programming</div>
+        <div class="skill-list">Python, C, Java</div>
+
+        <div class="skill-cat">Web Development</div>
+        <div class="skill-list">HTML, CSS, JavaScript, React</div>
+
+        <div class="skill-cat">Data &amp; ML</div>
+        <div class="skill-list">Python, Pandas, NumPy, Scikit-learn, Machine Learning, Data Analysis, Data Visualization, Streamlit</div>
+
+        <div class="skill-cat">Databases</div>
+        <div class="skill-list">SQL, SQLite, MongoDB</div>
+
+        <div class="skill-cat">Developer Tools</div>
+        <div class="skill-list">Git, GitHub, VS Code, Figma</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">Key Projects</h2>
+
+      <!-- 1. Forest Fire Early Warning System -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Forest Fire Early Warning System</span>
+          <span class="item-date">Python, Scikit-learn, Pandas, NumPy, Streamlit</span>
+        </div>
+        <ul class="project-points">
+          <li>Engineered a machine learning-based early warning system that analyzes environmental telemetry (temperature, humidity, wind velocity, drought indices) to predict wildfire risk.</li>
+          <li>Implemented automated feature preprocessing, train-test validation pipelines, and interactive risk prediction dashboards using Streamlit.</li>
+        </ul>
+      </div>
+
+      <!-- 2. Industrial IoT Edge Monitoring -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Industrial IoT Edge Monitoring &amp; Fault Detection</span>
+          <span class="item-date">C, Embedded Systems, IIoT, SQLite, TCP/IP</span>
+        </div>
+        <ul class="project-points">
+          <li>Architected a real-time edge telemetry monitoring and anomaly detection engine in C for industrial sensor data processing.</li>
+          <li>Implemented high-frequency threshold surveillance, local SQLite telemetry persistence, and socket-based alert dispatching.</li>
+        </ul>
+      </div>
+
+      <!-- 3. Fake News Detection -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Fake News Detection</span>
+          <span class="item-date">Python, Scikit-learn, TF-IDF, Logistic Regression</span>
+        </div>
+        <ul class="project-points">
+          <li>Developed an NLP classification pipeline that identifies misleading and fabricated news articles from large textual corpora.</li>
+          <li>Engineered text preprocessing, stopword removal, TF-IDF vectorization, and binary classification models.</li>
+        </ul>
+      </div>
+
+      <!-- 4. Voice Assistant -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Voice Assistant</span>
+          <span class="item-date">Python, SpeechRecognition, pyttsx3, Wikipedia API</span>
+        </div>
+        <ul class="project-points">
+          <li>Built an interactive desktop voice assistant executing spoken commands, system automation, live Wikipedia information retrieval, and text-to-speech feedback.</li>
+        </ul>
+      </div>
+
+      <!-- 5. Expense Tracker -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Expense Tracker</span>
+          <span class="item-date">Python</span>
+        </div>
+        <ul class="project-points">
+          <li>Created a practical expense management application for logging, categorizing, and tracking personal expenditure histories.</li>
+        </ul>
+      </div>
+
+      <!-- 6. Search Engine -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Search Engine</span>
+          <span class="item-date">HTML, Python</span>
+        </div>
+        <ul class="project-points">
+          <li>Developed a search query application designed to crawl, index, and retrieve relevant documents based on user search queries.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications & Training -->
+    <section class="section">
+      <h2 class="section-title">Certifications &amp; Internships</h2>
+      
+      <div class="cert-item">
+        <div>
+          <span class="cert-name">1. NPTEL / IIT Kharagpur</span> — <span class="cert-issuer">Mastering Speaking and Presentations: A Case-Based Approach</span>
+          <a href="https://drive.google.com/file/d/1ZdqYzXRsjnjunaSaUSG7uYgTt2ETVWol/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; font-size: 11px; color: #063F3A; text-decoration: underline; font-weight: 600;">[View Certificate]</a>
+        </div>
+        <span class="cert-badge" style="background: #FFF8E1; border: 1px solid #C9A227; color: #8A6D05;">Jan–Apr 2025 • NPTEL Elite, 60%</span>
+      </div>
+
+      <div class="cert-item">
+        <div>
+          <span class="cert-name">2. Genesys Academy of Computer Science</span> — <span class="cert-issuer">Internship Training in Python with Machine Learning</span>
+          <a href="https://drive.google.com/file/d/1hJqPtWekh2YjCRp3GCfEdD49tNSYvIRo/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; font-size: 11px; color: #063F3A; text-decoration: underline; font-weight: 600;">[View Certificate]</a>
+        </div>
+        <span class="cert-badge">July 2025 • Verified</span>
+      </div>
+
+      <div class="cert-item">
+        <div>
+          <span class="cert-name">3. Vibe Coding Workshop</span> — <span class="cert-issuer">Hands-on AI-Assisted Developer Sessions, Karaikal</span>
+          <a href="https://drive.google.com/file/d/1tdaw6vBrGO2p41COT0vz3q1AacgF4HJK/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; font-size: 11px; color: #063F3A; text-decoration: underline; font-weight: 600;">[View Certificate]</a>
+        </div>
+        <span class="cert-badge">July 2025 • Workshop Participation</span>
+      </div>
+
+      <div class="cert-item">
+        <div>
+          <span class="cert-name">4. NPTEL / IIT Kharagpur</span> — <span class="cert-issuer">Introduction to Industry 4.0 and Industrial Internet of Things</span>
+          <a href="https://drive.google.com/file/d/1UhBCmRghyMq99ZSARuNy3v-XPs05TbrX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; font-size: 11px; color: #063F3A; text-decoration: underline; font-weight: 600;">[View Certificate]</a>
+        </div>
+        <span class="cert-badge" style="background: #FFF8E1; border: 1px solid #C9A227; color: #8A6D05;">Jan–Apr 2026 • NPTEL Elite, 75%</span>
+      </div>
+
+      <div class="cert-item">
+        <div>
+          <span class="cert-name">5. Alfrin Technologies</span> — <span class="cert-issuer">Internship in Full Stack Development</span>
+          <a href="https://drive.google.com/file/d/11nk133ifoygGxAJOLGEMllQOFP3ko1e4/view?usp=drive_link" target="_blank" rel="noopener noreferrer" style="margin-left: 8px; font-size: 11px; color: #063F3A; text-decoration: underline; font-weight: 600;">[View Certificate]</a>
+        </div>
+        <span class="cert-badge">July 2026 • Verified</span>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
